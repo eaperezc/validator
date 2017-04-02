@@ -8,5 +8,8 @@ namespace Validator;
 interface RuleInterface
 {
     public function getSignature();
+    public function getParameter();
+    public function setParameter($value);
+
     public function validate($value);
 }
