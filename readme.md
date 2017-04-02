@@ -5,6 +5,7 @@ This project is a different way of validating data in the app. The idea was base
 We would do something like this:
 
 ```php
+$validator = new Validator();
 $errors = $validator->validate( $data, [
     'id'            => 'required',
     'name'          => 'required',
@@ -15,16 +16,21 @@ $errors = $validator->validate( $data, [
 Of course the idea is that you can combine multiple validation rules for a column as we show here.
 
 ```php
+$validator = new Validator();
 $errors = $validator->validate( $data, [
-    'account_id' => 'required|entity_key',
-    'status'     => 'required',
-    'is_alive'   => 'boolean'
+    'email_address' => 'required|email',
+    'status'        => 'required',
+    'is_alive'      => 'boolean'
 ]);
 ```
 
+This also come with a static kinda Facade that you can use so you dont have to instantiate the $validator object. To do that you just call it this way:
 
-
-
+```php
+$errors = Validator::check($data, [
+    'email_address' => 'email'
+]);
+```
 
 
 ## Contributing
