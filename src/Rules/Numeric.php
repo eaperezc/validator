@@ -13,6 +13,6 @@ class Numeric extends Rule
 
     public function validate($value)
     {
-        return !is_numeric($value);
+        return is_numeric($value);
     }
 }

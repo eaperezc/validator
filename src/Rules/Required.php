@@ -13,6 +13,6 @@ class Required extends Rule
 
     public function validate($value)
     {
-        return  (!isset($value) || is_null($value));
+        return (isset($value) && !is_null($value));
     }
 }

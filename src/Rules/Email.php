@@ -20,9 +20,9 @@ class Email extends Rule
 
     public function validate($value)
     {
-        if (!is_string($value) || !preg_match($this->regex, $value) ) {
-            return true;
+        if (!is_string($value) || !preg_match($this->regex, $value)) {
+            return false;
         }
-        return false;
+        return true;
     }
 }

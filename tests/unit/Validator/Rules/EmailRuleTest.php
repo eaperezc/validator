@@ -3,7 +3,6 @@
 namespace Tests\Validator\Rules;
 
 use Validator\Validator;
-use Validator\Rules\EmailValidator;
 
 class EmailRuleTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,11 +1,11 @@
 {
-    "name": "spartan/validator",
+    "name": "eaperezc/validator",
     "description": "A validation library for php",
     "license": "MIT",
     "authors": [
         {
             "name": "Enrique Perez",
-            "email": "eperez@sproutloud.com"
+            "email": "eaperezc@gmail.com"
         }
     ],
     "autoload": {

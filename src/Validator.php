@@ -18,7 +18,10 @@ class Validator
     private $rules = [
         '\Validator\Rules\Required',
         '\Validator\Rules\Boolean',
-        '\Validator\Rules\Email'
+        '\Validator\Rules\Email',
+        '\Validator\Rules\Numeric',
+        '\Validator\Rules\Min',
+        '\Validator\Rules\Max'
     ];
 
     /**
@@ -97,7 +100,7 @@ class Validator
 
                 // Here we will check the rules
                 if (isset($this->rule_map[$rule])
-                    && $this->rule_map[$rule]->validate($value)) {
+                    && !$this->rule_map[$rule]->validate($value)) {
                     // Get the errors that came from the validation
                     $errors[$column] = $rule;
                 }

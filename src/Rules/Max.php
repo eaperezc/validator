@@ -13,7 +13,7 @@ class Max extends Rule
 
     public function validate($value)
     {
-        return (!is_numeric($value) && $value > $this->getParameter());
+        return (is_numeric($value) && $value < $this->getParameter());
     }
 
 }

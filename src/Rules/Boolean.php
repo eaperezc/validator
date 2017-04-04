@@ -13,6 +13,6 @@ class Boolean extends Rule
 
     public function validate($value)
     {
-        return !is_bool($value);
+        return is_bool($value);
     }
 }
