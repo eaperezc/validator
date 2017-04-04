@@ -80,13 +80,12 @@ class Validator
         $this->setupRulesMap();
 
         foreach ($rules as $column => $validation_pipes) {
-
             $validation_array = explode('|', $validation_pipes);
             foreach ($validation_array as $rule) {
-
                 // This is because some rules need a parameter fo work
                 // for examples the Min or Max rules need the value to check with
                 $rule_array = explode(':', $rule);
+
                 if (sizeof($rule_array) > 1) {
                     // get the values ($rule is overwritten)
                     $rule = $rule_array[0]; // name of the rule

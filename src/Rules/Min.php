@@ -15,5 +15,4 @@ class Min extends Rule
     {
         return (is_numeric($value) && $value > $this->getParameter());
     }
-
 }

@@ -33,5 +33,4 @@ class NumericRuleTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals($errors, $assert_value);
     }
-
 }
