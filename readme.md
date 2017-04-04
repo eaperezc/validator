@@ -42,8 +42,8 @@ This are the available rules that we have on the library so far. More to come.
 | boolean     | The value must be true or false. Null is not valid                     |
 | numeric     | Numeric values like float, integers and strings with numeric values    |
 | email       | Only values that match an email address strings. e.g. test@example.com |
-| max:<value> | Value must be less than the passed parameter                           |
-| min:<value> | Value must be greater than the passed parameter                        |
+| max:param   | Value must be less than the passed parameter (param)                   |
+| min:param   | Value must be greater than the passed parameter (param)                |
 
 
 ## Contributing
